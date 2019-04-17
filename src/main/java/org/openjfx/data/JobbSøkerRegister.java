@@ -10,5 +10,6 @@ public class JobbSøkerRegister {
 
     public void settInnJobbSøker(JobbSøker jobbSøker){
         jobbSøkere.add(jobbSøker);
+        //TODO save to file
     }
 }
