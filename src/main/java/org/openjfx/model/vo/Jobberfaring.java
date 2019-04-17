@@ -1,47 +1,52 @@
 package org.openjfx.model.vo;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Jobberfaring implements Serializable {
 
-    private String jobbtittel;
-    private String selskap;
-    private String sted;
-    private LocalDate fra;
-    private LocalDate til;
-    private  String beskrivelse;
+    private StringProperty jobbtittel;
+    private StringProperty selskap;
+    private StringProperty sted;
+    private ObjectProperty<LocalDate> fra;
+    private ObjectProperty<LocalDate> til;
+    private StringProperty beskrivelse;
 
-    public Jobberfaring(String jobbtittel, String selskap, String sted, LocalDate fra, LocalDate til, String beskrivelse) {
-        this.jobbtittel = jobbtittel;
-        this.selskap = selskap;
-        this.sted = sted;
-        this.fra = fra;
-        this.til = til;
-        this.beskrivelse = beskrivelse;
+public Jobberfaring(String jobbtittel, String selskap, String sted, LocalDate fra, LocalDate til, String beskrivelse) {
+        this.jobbtittel = new SimpleStringProperty(jobbtittel);
+        this.selskap = new SimpleStringProperty(selskap);
+        this.sted = new SimpleStringProperty(sted);
+        this.fra = new SimpleObjectProperty<>(fra);
+        this.til = new SimpleObjectProperty<>(til);
+        this.beskrivelse = new SimpleStringProperty(beskrivelse);
     }
 
-    public String getJobbtittel() {
+    public StringProperty getJobbtittel() {
         return jobbtittel;
     }
 
-    public String getSelskap() {
+    public StringProperty getSelskap() {
         return selskap;
     }
 
-    public String getSted() {
+    public StringProperty getSted() {
         return sted;
     }
 
-    public LocalDate getFra() {
+    public ObjectProperty<LocalDate> getFra() {
         return fra;
     }
 
-    public LocalDate getTil() {
+    public ObjectProperty<LocalDate> getTil() {
         return til;
     }
 
-    public String getBeskrivelse() {
+    public StringProperty getBeskrivelse() {
         return beskrivelse;
     }
 

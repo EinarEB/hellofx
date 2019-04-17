@@ -17,19 +17,6 @@ public class HovedMenyController implements Initializable {
     @FXML
     private Button jobbSøkerButton;
 
-    @FXML
-    protected void handleJobbSøkerButtonAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-
-        fxmlLoader.setLocation(getClass().getResource("/org/openjfx/employment_registration_form.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        Scene scene = new Scene(root, 800, 700);
-        stage.setTitle("Jobbsøker");
-        stage.setScene(scene);
-        stage.show();
-
-    }
 
     public void handleNyJobbSøkerButtonAction(ActionEvent event) {
         try{
