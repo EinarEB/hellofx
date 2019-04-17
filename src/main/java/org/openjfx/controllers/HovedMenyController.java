@@ -20,7 +20,8 @@ public class HovedMenyController implements Initializable {
     @FXML
     protected void handleJobbSøkerButtonAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("employment_registration_form.fxml"));
+
+        fxmlLoader.setLocation(getClass().getResource("/org/openjfx/employment_registration_form.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         Scene scene = new Scene(root, 800, 700);
@@ -30,8 +31,27 @@ public class HovedMenyController implements Initializable {
 
     }
 
+    public void handleNyJobbSøkerButtonAction(ActionEvent event) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("/org/openjfx/ny_jobbsøker.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 800, 700);
+            stage.setTitle("Ny Jobbsøker");
+            stage.setScene(scene);
+            stage.show();
+
+        }catch (IOException e){
+            System.out.println("Kunne ikke laste opp ny_jobbsøker.fxml");
+            e.printStackTrace();
+        }
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
 }
