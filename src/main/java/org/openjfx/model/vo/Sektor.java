@@ -1,6 +1,8 @@
 package org.openjfx.model.vo;
 
-public enum Sektor {
+import java.io.Serializable;
+
+public enum Sektor implements Serializable {
 
     OFFENTLIG, PRIVAT
 }

@@ -2,10 +2,11 @@ package org.openjfx.model;
 
 import org.openjfx.model.vo.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JobbSøker {
+public class JobbSøker implements Serializable {
 
     private String id;
     private KontaktInformasjon kontaktInformasjon;

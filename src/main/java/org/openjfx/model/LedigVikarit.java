@@ -5,11 +5,12 @@ import org.openjfx.model.vo.JobbKategori;
 import org.openjfx.model.vo.KontaktInformasjon;
 import org.openjfx.model.vo.Sektor;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LedigVikarit {
+public class LedigVikarit implements Serializable {
 
      private Sektor sektor;
      private Adresse arbeidSted;

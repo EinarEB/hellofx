@@ -1,6 +1,8 @@
 package org.openjfx.model.vo;
 
-public class Referanse {
+import java.io.Serializable;
+
+public class Referanse implements Serializable {
 
     private String fornavn;
     private String etterNavn;

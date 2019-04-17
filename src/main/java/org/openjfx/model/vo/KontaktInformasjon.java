@@ -1,6 +1,8 @@
 package org.openjfx.model.vo;
 
-public class KontaktInformasjon {
+import java.io.Serializable;
+
+public class KontaktInformasjon implements Serializable {
 
     private String epost;
     private String telefonNr;

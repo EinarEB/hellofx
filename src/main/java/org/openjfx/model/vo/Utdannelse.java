@@ -1,8 +1,9 @@
 package org.openjfx.model.vo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Utdannelse  {
+public class Utdannelse implements Serializable {
 
     private String skole;
     private String studietittel;

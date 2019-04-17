@@ -1,6 +1,8 @@
 package org.openjfx.model.vo;
 
-public class Lønnskrav {
+import java.io.Serializable;
+
+public class Lønnskrav implements Serializable {
 
     private int min;
     private int max;
