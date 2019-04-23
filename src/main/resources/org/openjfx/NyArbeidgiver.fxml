@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controllers.ArbeidsgiverController">
+   <children>
+      <Pane prefHeight="498.0" prefWidth="644.0">
+         <children>
+            <Label layoutX="13.0" layoutY="24.0" text=" Arbeidsgiver">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="Private" layoutX="198.0" layoutY="120.0" mnemonicParsing="false" text="Private" />
+            <RadioButton fx:id="Offentlig" layoutX="283.0" layoutY="120.0" mnemonicParsing="false" text="Offentlig" />
+            <Label layoutX="71.0" layoutY="112.0" prefHeight="34.0" prefWidth="103.0" text="Sektor">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="174.0" text="Bransje">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Bransje" layoutX="181.0" layoutY="171.0" />
+            <TextField fx:id="Adresse" layoutX="181.0" layoutY="205.0" />
+            <Label layoutX="73.0" layoutY="209.0" text="Adresse">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="Lagre" layoutX="220.0" layoutY="369.0" mnemonicParsing="false" onAction="#GiveronAction" prefHeight="27.0" prefWidth="89.0" text="Lagre" />
+            <Label layoutX="76.0" layoutY="249.0" prefHeight="17.0" prefWidth="67.0" text="Telefone" />
+            <TextField fx:id="Telefone" layoutX="181.0" layoutY="244.0" />
+            <TextField fx:id="Epost" layoutX="181.0" layoutY="282.0" />
+            <TextField fx:id="Ledigevikariater" layoutX="181.0" layoutY="322.0" />
+            <Label layoutX="87.0" layoutY="287.0" text="Epost" />
+            <Label layoutX="60.0" layoutY="327.0" text="Ledigevikariater" />
+         </children>
+      </Pane>
+   </children>
+</HBox>

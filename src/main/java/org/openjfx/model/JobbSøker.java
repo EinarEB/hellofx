@@ -3,75 +3,114 @@ package org.openjfx.model;
 import org.openjfx.model.vo.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-public class JobbSøker implements Serializable {
+public class JobbSøker {
+    private String fornavn;
+    private String Etternavn;
+    private LocalDate  fødelsdato;
+    private String epost;
+    private String telefoneNr;
+    private String Erfaring;
+    private String utdannelse;
+    private String Referanser;
 
-    private String id;
-    private KontaktInformasjon kontaktInformasjon;
-    private PersonligInformasjon personligInformasjon;
-    private List<JobbKategori> ønsketKategori = new ArrayList<>();
-    private List<Utdannelse> utdannelse;
-    private List<Jobberfaring> jobberfaring;
-    private Lønnskrav lønnskrav;
-    private List<Referanse> referanser = new ArrayList<>();
-    private static long JOBB_SØKER_NR = 1000;
+    public JobbSøker(String fornavn, String etternavn,LocalDate fødelsdato,String epost,
+                     String telefoneNr, String referanser, String erfaring, String utdannelse) {
+        this.fornavn = fornavn;
+        Etternavn = etternavn;
+        this.epost = epost;
+        this.fødelsdato = fødelsdato;
+        this.telefoneNr = telefoneNr;
+        Erfaring = erfaring;
+        this.utdannelse = utdannelse;
+        Referanser = referanser;
 
-
-    public JobbSøker(KontaktInformasjon kontaktInformasjon, PersonligInformasjon personligInformasjon) {
-        this.kontaktInformasjon = kontaktInformasjon;
-        this.personligInformasjon = personligInformasjon;
-        id = JOBB_SØKER_NR++ + "JS";
-
-
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void addØnsketKategori(JobbKategori nyJobbKategori) {
-
-        ønsketKategori.add(nyJobbKategori);
 
     }
-    public void addReferanse(Referanse nyReferanse){
 
-        referanser.add(nyReferanse);
+
+    public String getFornavn() {
+        return fornavn;
     }
 
-    public void setKontaktInformasjon(KontaktInformasjon kontaktInformasjon) {
-        this.kontaktInformasjon = kontaktInformasjon;
+    public void setFornavn(String fornavn) {
+        this.fornavn = fornavn;
     }
 
-    public void setPersonligInformasjon(PersonligInformasjon personligInformasjon) {
-        this.personligInformasjon = personligInformasjon;
+    public String getEtternavn() {
+        return Etternavn;
     }
 
-    public void addUtdannelse(Utdannelse nyUtdannelse){
-
-        utdannelse.add(nyUtdannelse);
-    }
-    public void addJobbErfaring(Jobberfaring nyJobbErfaring){
-
-        jobberfaring.add(nyJobbErfaring);
+    public void setEtternavn(String etternavn) {
+        Etternavn = etternavn;
     }
 
-    public void setLønnskrav(Lønnskrav lønnskrav) {
-        this.lønnskrav = lønnskrav;
+    public String getEpost() {
+        return epost;
     }
+
+    public void setEpost(String epost) {
+        this.epost = epost;
+    }
+
+    public LocalDate getFødelsdato() {
+        return fødelsdato;
+    }
+
+    public void setFødelsdato(LocalDate fødelsdato) {
+        this.fødelsdato = fødelsdato;
+    }
+
+    public String getTelefoneNr() {
+        return telefoneNr;
+    }
+
+    public void setTelefoneNr(String telefoneNr) {
+        this.telefoneNr = telefoneNr;
+    }
+
+    public String getReferanser() {
+        return Referanser;
+    }
+
+    public void setReferanser(String referanser) {
+        Referanser = referanser;
+    }
+
+    public String getErfaring() {
+        return Erfaring;
+    }
+
+    public void setErfaring(String erfaring) {
+        Erfaring = erfaring;
+    }
+
+    public String getUtdannelse() {
+        return utdannelse;
+    }
+
+    public void setUtdannelse(String utdannelse) {
+        this.utdannelse = utdannelse;
+    }
+
+
 
     @Override
     public String toString() {
         return "JobbSøker{" +
-                "kontaktInformasjon=" + kontaktInformasjon +
-                ", personligInformasjon=" + personligInformasjon +
-                ", ønsketKategori=" + ønsketKategori +
-                ", utdannelse=" + utdannelse +
-                ", jobberfaring=" + jobberfaring +
-                ", lønnskrav=" + lønnskrav +
-                ", referanser=" + referanser +
+                "fornavn='" + fornavn + '\'' +
+                ", Etternavn='" + Etternavn + '\'' +
+                ", epost='" + epost + '\'' +
+                ", fødelsdato=" + fødelsdato +
+                ", telefoneNr='" + telefoneNr + '\'' +
+                ", Referanser='" + Referanser + '\'' +
+                ", Erfaring='" + Erfaring + '\'' +
+                ", utdannelse='" + utdannelse + '\'' +
                 '}';
     }
 }

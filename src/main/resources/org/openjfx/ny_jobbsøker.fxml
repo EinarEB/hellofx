@@ -2,14 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -17,22 +15,21 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controllers.JobbsøkerController">
-   <children>
-      <ButtonBar layoutX="78.0" layoutY="105.0" prefHeight="40.0" prefWidth="200.0" />
-      <TabPane layoutX="36.0" layoutY="32.0" prefHeight="407.0" prefWidth="685.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Personlige opplysninger">
-               <content>
-                   <GridPane prefHeight="300.0" prefWidth="500.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="87.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="359.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="161.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="0.0" prefWidth="0.0" />
-                    </columnConstraints>
-                    <rowConstraints>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="644.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controllers.JobbsøkerController">
+  <tabs>
+    <Tab text="Register JobbSøker">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane prefHeight="372.0" prefWidth="685.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="87.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="359.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="161.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
                         <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
@@ -41,192 +38,65 @@
                         <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="35.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
                         <RowConstraints />
-                    </rowConstraints>
-
-                       <!-- Personlig informasjon -->
-
-                      <Label text="Fornavn:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                      <TextField fx:id="fornavnField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-
-                      <Label text="Etternavn:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                      <TextField fx:id="etternavnField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-
-
-                       <Label text="Fødselsdato:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                       <TextField fx:id="fødselsDatoField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-
-
-                       <!-- Kontaktinformasjon -->
-
-                       <Label prefHeight="28.0" prefWidth="198.0" text="Kontaktinformasjon" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                        <font>
-                           <Font name="Avenir Black Oblique" size="12.0" />
-                        </font></Label>
-
-                       <Label text="Epost:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                       <TextField fx:id="epostField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-
-
-                       <Label text="Mobil:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                       <TextField fx:id="telefonField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                     <Label prefHeight="28.0" prefWidth="198.0" text="Personlige opplysninger" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                        <font>
-                           <Font name="Avenir Black Oblique" size="12.0" />
-                        </font>
-                     </Label>
-
-
-                       <padding>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                     </rowConstraints>
+                     <padding>
                         <Insets top="10.0" />
                      </padding>
-                  </GridPane>
-               </content></Tab>
-          <Tab text="CV-registrering">
-               <content>
-
-                  <GridPane prefHeight="380.0" prefWidth="660.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.0" minWidth="10.0" prefWidth="563.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="122.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints maxHeight="70.0" minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="300.0" minHeight="50.0" prefHeight="200.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="70.0" minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="300.0" minHeight="100.0" prefHeight="200.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="30.0" prefHeight="50.0" />
-                        <RowConstraints maxHeight="300.0" minHeight="100.0" prefHeight="200.0" />
-                    </rowConstraints>
                      <children>
-
-                         <!-- Arbeidserfaring -->
-                         <Label minHeight="72.0" prefHeight="72.0" prefWidth="175.0" text="Arbeidserfaring">
-                             <font>
-                                 <Font name="Avenir Black Oblique" size="12.0" />
-                             </font>
-                         </Label>
-                        <TableView fx:id="jobberfaringTable" prefHeight="270.0" prefWidth="502.0" GridPane.rowIndex="1">
-                          <columns>
-                            <TableColumn fx:id="jobbTittelColumn" prefWidth="75.0" text="Jobbtittel" />
-                            <TableColumn fx:id="selskapColumn" prefWidth="75.0" text="Selskap" />
-                              <TableColumn fx:id="fraColumn" prefWidth="75.0" text="Fra" />
-                              <TableColumn fx:id="tilColumn" prefWidth="75.0" text="Til" />
-                              <TableColumn fx:id="stedColumn" prefWidth="78.0" text="Sted" />
-                              <TableColumn fx:id="beskrivelseColumn" prefWidth="187.0" text="Beskrivelse" />
-                          </columns>
-                        </TableView>
-                         <Button mnemonicParsing="false" prefHeight="266.0" prefWidth="73.0" text="Legg til" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-                         <!-- Utdannelse -->
-                        <Label minHeight="72.0" prefHeight="72.0" prefWidth="175.0" text="Utdannelse" GridPane.rowIndex="2">
-                            <font>
-                                <Font name="Avenir Black Oblique" size="12.0" />
-                            </font>
+                        <Label text="Fornavn:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="fornavnField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label text="Etternavn:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="etternavnField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="Fødselsdato:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label prefHeight="28.0" prefWidth="198.0" text="Kontaktinformasjon" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Avenir Black Oblique" size="12.0" />
+                           </font>
                         </Label>
-                         <TableView fx:id="utdannelseTable" prefHeight="121.0" prefWidth="563.0" GridPane.rowIndex="3">
-                             <columns>
-                                 <TableColumn fx:id="studietitelColumn" prefWidth="75.0" text="Studietittel" />
-                                 <TableColumn fx:id="skoleColumn" prefWidth="75.0" text="Skole" />
-                                 <TableColumn fx:id="gardColumn" prefWidth="75.0" text="Grad" />
-                                 <TableColumn fx:id="fraUColumn" prefWidth="75.0" text="Fra" />
-                                 <TableColumn fx:id="tilUColumn" prefWidth="78.0" text="Til" />
-                                 <TableColumn fx:id="beskrivelseUColumn" prefWidth="187.0" text="Beskrivelse" />
-                             </columns>
-                         </TableView>
-                         <Button mnemonicParsing="false" prefHeight="266.0" prefWidth="73.0" text="Legg til" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-
-                         <!-- Referanse -->
-                         <Label minHeight="72.0" prefHeight="72.0" prefWidth="177.0" text="Referanse" GridPane.rowIndex="4">
-                             <font>
-                                 <Font name="Avenir Black Oblique" size="12.0" />
-                             </font>
-                         </Label>
-                         <TableView fx:id="referanseTable" prefHeight="121.0" prefWidth="563.0" GridPane.rowIndex="5">
-                             <columns>
-                                 <TableColumn fx:id="fornavnRColumn" prefWidth="75.0" text="Fornavn" />
-                                 <TableColumn fx:id="etternavnRColumn" prefWidth="75.0" text="EtterNavn" />
-                                 <TableColumn fx:id="telefonRColumn" prefWidth="75.0" text="Telefone" />
-                                 <TableColumn fx:id="beskrivelserRColumn" prefWidth="75.0" text="Beskrivelse" />
-
-                             </columns>
-                         </TableView>
-                         <Button mnemonicParsing="false" prefHeight="266.0" prefWidth="73.0" text="Legg til" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Epost:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="epostField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Label text="Mobil:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="telefonField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <Label prefHeight="28.0" prefWidth="198.0" text="Personlige opplysninger" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Avenir Black Oblique" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="81.0" text="Erfaring" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="Erfaring" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <Label prefHeight="17.0" prefWidth="80.0" text="Utdannelse" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <TextField fx:id="Utdannelse" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <Label prefHeight="17.0" prefWidth="65.0" text="Referanser" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="Referanser" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <DatePicker fx:id="datecalander"  prefHeight="27.0" prefWidth="369.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
-               </content>
-            </Tab>
-            <Tab text="Preferanser">
-               <content>
-                  <GridPane prefHeight="332.0" prefWidth="685.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="120.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                      <Label minHeight="72.0" prefHeight="72.0" prefWidth="177.0" text="Lønnskrav" GridPane.rowIndex="0">
-                          <font>
-                              <Font name="Avenir Black Oblique" size="12.0" />
-                          </font>
-                      </Label>
-                     <GridPane prefHeight="152.0" prefWidth="228.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                       <columnConstraints>
-                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="54.0" />
-                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="174.0" />
-                       </columnConstraints>
-                       <rowConstraints>
-                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                       </rowConstraints>
-                        <children>
-                           <Label text="Fra:" />
-                           <TextField prefHeight="26.0" prefWidth="137.0" GridPane.columnIndex="1" />
-                           <Label layoutX="10.0" layoutY="27.0" text="Til:" GridPane.rowIndex="1" />
-                           <TextField layoutX="64.0" layoutY="22.0" prefHeight="26.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        </children>
-                     </GridPane>
-                     <Label layoutX="10.0" layoutY="-12.0" minHeight="72.0" prefHeight="72.0" prefWidth="177.0" text="JobbKategori" GridPane.rowIndex="2">
-                        <font>
-                           <Font name="Avenir Black Oblique" size="12.0" />
-                        </font>
-                     </Label>
-                     <GridPane prefHeight="133.0" prefWidth="228.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                       <columnConstraints>
-                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                       </columnConstraints>
-                       <rowConstraints>
-                         <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                         <RowConstraints maxHeight="25.0" minHeight="4.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                         <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                         <RowConstraints maxHeight="25.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                       </rowConstraints>
-                        <children>
-                           <CheckBox mnemonicParsing="false" text="IT" />
-                           <CheckBox mnemonicParsing="false" text="Økonomi og Regnskap" GridPane.rowIndex="1" />
-                           <CheckBox mnemonicParsing="false" text="Salg" GridPane.rowIndex="2" />
-                           <CheckBox mnemonicParsing="false" text="Ledelse" GridPane.rowIndex="3" />
-                        </children>
-                     </GridPane>
-
-                  </GridPane>
-               </content>
-            </Tab>
-            <Tab text="Oppsumering">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TextArea layoutX="70.0" layoutY="14.0" prefHeight="300.0" prefWidth="512.0" />
-                     </children></AnchorPane>
-               </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <Button layoutX="78.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleLagreJobbSøker" prefHeight="40.0" prefWidth="146.0" text="Lagre" />
-      <Button layoutX="245.0" layoutY="448.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Avbryt" />
-   </children>
-</AnchorPane>
+                  <Button layoutX="244.0" layoutY="430.0" mnemonicParsing="false" onAction="#registere" prefHeight="27.0" prefWidth="140.0" text="Registere" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="JobbSøker Informasjon">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="181.0" layoutY="472.0" mnemonicParsing="false" onAction="#OppdateronAction" prefHeight="27.0" prefWidth="92.0" text="Oppdater" />
+                  <TableView layoutX="2.0" layoutY="14.0" prefHeight="439.0" prefWidth="644.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Fornavn" />
+                      <TableColumn prefWidth="75.0" text="EtterNavn" />
+                        <TableColumn prefWidth="92.0" text="Fødelsdato" />
+                        <TableColumn prefWidth="68.0" text="Epost" />
+                        <TableColumn prefWidth="65.0" text="Mobil" />
+                        <TableColumn prefWidth="104.0" text="Utdannelse" />
+                        <TableColumn prefWidth="90.0" text="Referanser" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="315.0" layoutY="472.0" mnemonicParsing="false" onAction="#SlettonAction" prefHeight="27.0" prefWidth="111.0" text="Slett" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

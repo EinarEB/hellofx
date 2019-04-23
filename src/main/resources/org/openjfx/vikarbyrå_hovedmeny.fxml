@@ -5,27 +5,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="org.openjfx.controllers.HovedMenyController"
-        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controllers.HovedMenyController">
    <children>
-      <Button onAction="#handleNyJobbSøkerButtonAction" layoutX="55.0" layoutY="75.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Ny Jobbsøker" />
-      <Button layoutX="55.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Vis Jobbsøkere" />
-      <Button layoutX="55.0" layoutY="200.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Slett Jobbsøker" />
-      <Button layoutX="55.0" layoutY="260.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Oppdater Jobbsøker" />
-      <Button layoutX="242.0" layoutY="74.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Ny Arbeidsgiver" />
-      <Button layoutX="242.0" layoutY="139.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Vis Arbeidsgivere" />
-      <Button layoutX="242.0" layoutY="199.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Slett Arbeidsgiver" />
-      <Button layoutX="242.0" layoutY="259.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Oppdater Arbeidsgiver" />
+      <Button layoutX="55.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleNyJobbSøkerButtonAction" prefHeight="50.0" prefWidth="162.0" text="Ny Jobbsøker" />
+      <Button layoutX="55.0" layoutY="140.0" mnemonicParsing="false" onAction="#visJobbsøkereAction" prefHeight="50.0" prefWidth="162.0" text="Vis Jobbsøkere" />
+      <Button layoutX="55.0" layoutY="200.0" mnemonicParsing="false" onAction="#SlettJobbsøkereonAction" prefHeight="50.0" prefWidth="162.0" text="Slett Jobbsøker" />
+      <Button layoutX="55.0" layoutY="260.0" mnemonicParsing="false" onAction="#OppdaterJobbsøkeronAction" prefHeight="50.0" prefWidth="162.0" text="Oppdater Jobbsøker" />
+      <Button layoutX="242.0" layoutY="74.0" mnemonicParsing="false" onAction="#NyArbeidsgiverAction" prefHeight="50.0" prefWidth="162.0" text="Ny Arbeidsgiver" />
+      <Button layoutX="242.0" layoutY="139.0" mnemonicParsing="false" onAction="#visArbeidsgivereAction" prefHeight="50.0" prefWidth="162.0" text="Vis Arbeidsgivere" />
+      <Button layoutX="242.0" layoutY="199.0" mnemonicParsing="false" onAction="#SlettArbeidsgiveronAction" prefHeight="50.0" prefWidth="162.0" text="Slett Arbeidsgiver" />
+      <Button layoutX="242.0" layoutY="259.0" mnemonicParsing="false" onAction="#OppdaterArbeidsgiveronAction" prefHeight="50.0" prefWidth="162.0" text="Oppdater Arbeidsgiver" />
       <Label layoutX="233.0" layoutY="14.0" prefHeight="37.0" prefWidth="250.0" text="Vikarbyrå">
          <font>
             <Font name="Bradley Hand Bold" size="29.0" />
          </font>
       </Label>
-      <Button layoutX="433.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Ny Vikariat" />
-      <Button layoutX="433.0" layoutY="137.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Vis Vikariater" />
-      <Button layoutX="433.0" layoutY="197.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Slett Vikariat" />
-      <Button layoutX="433.0" layoutY="257.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Oppdater Vikariat" />
-      <Button layoutX="55.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" text="Opprett Arbeidsforhold" />
-      <Button layoutX="345.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" text="Vis Arbeidsforholdene" />
+      <Button layoutX="433.0" layoutY="72.0" mnemonicParsing="false" onAction="#NyVikariatAction" prefHeight="50.0" prefWidth="162.0" text="Ny Vikariat" />
+      <Button layoutX="433.0" layoutY="137.0" mnemonicParsing="false" onAction="#visVikariateronAction" prefHeight="50.0" prefWidth="162.0" text="Vis Vikariater" />
+      <Button layoutX="433.0" layoutY="197.0" mnemonicParsing="false" onAction="#SlettVikariatonAction" prefHeight="50.0" prefWidth="162.0" text="Slett Vikariat" />
+      <Button layoutX="433.0" layoutY="257.0" mnemonicParsing="false" onAction="#OppdaterVikariatonAction" prefHeight="50.0" prefWidth="162.0" text="Oppdater Vikariat" />
+      <Button layoutX="55.0" layoutY="330.0" mnemonicParsing="false" onAction="#OpprettArbeidsforholdonAction" prefHeight="50.0" prefWidth="250.0" text="Opprett Arbeidsforhold" />
+      <Button layoutX="345.0" layoutY="330.0" mnemonicParsing="false" onAction="#VisArbeidsforholdeneonAction" prefHeight="50.0" prefWidth="250.0" text="Vis Arbeidsforholdene" />
    </children>
 </AnchorPane>

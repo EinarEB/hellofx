@@ -7,58 +7,85 @@ import org.openjfx.model.vo.Sektor;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Arbeidsgiver implements Serializable {
 
 
+    private String sektor;
+    private String adresse;
+    private String bransje;
+    private int telfone;
+    private String epost;
+    private String Ledigevikariater;
 
-    private Sektor sektor;
-
-    private Adresse adresse;
-
-    private Bransje bransje;
-
-    private KontaktInformasjon kontaktInformasjon;
-
-    private List<LedigVikarit> ledigVikarit = new ArrayList<>();
-
-    public Arbeidsgiver(Sektor sektor, Adresse adresse, Bransje bransje, KontaktInformasjon kontaktInformasjon) {
+    public Arbeidsgiver(String sektor, String adresse, String bransje, int telfone, String epost, String ledigevikariater) {
         this.sektor = sektor;
         this.adresse = adresse;
         this.bransje = bransje;
-        this.kontaktInformasjon = kontaktInformasjon;
+        this.telfone = telfone;
+        this.epost = epost;
+        Ledigevikariater = ledigevikariater;
     }
 
-    public void addLedigeVikariter(LedigVikarit nyLedigVikarit){
-
-        ledigVikarit.add(nyLedigVikarit);
-    }
-
-    public Sektor getSektor() {
+    public String getSektor() {
         return sektor;
     }
 
-    public Adresse getAdresse() {
+    public void setSektor(String sektor) {
+        this.sektor = sektor;
+    }
+
+    public String getAdresse() {
         return adresse;
     }
 
-    public Bransje getBransje() {
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getBransje() {
         return bransje;
     }
 
-    public KontaktInformasjon getKontaktInformasjon() {
-        return kontaktInformasjon;
+    public void setBransje(String bransje) {
+        this.bransje = bransje;
+    }
+
+    public int getTelfone() {
+        return telfone;
+    }
+
+    public void setTelfone(int telfone) {
+        this.telfone = telfone;
+    }
+
+    public String getEpost() {
+        return epost;
+    }
+
+    public void setEpost(String epost) {
+        this.epost = epost;
+    }
+
+    public String getLedigevikariater() {
+        return Ledigevikariater;
+    }
+
+    public void setLedigevikariater(String ledigevikariater) {
+        Ledigevikariater = ledigevikariater;
     }
 
     @Override
     public String toString() {
         return "Arbeidsgiver{" +
-                "sektor=" + sektor +
-                ", adresse=" + adresse +
-                ", bransje=" + bransje +
-                ", kontaktInformasjon=" + kontaktInformasjon +
-                ", ledigVikarit=" + ledigVikarit +
+                "sektor='" + sektor + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", bransje='" + bransje + '\'' +
+                ", telfone=" + telfone +
+                ", epost='" + epost + '\'' +
+                ", Ledigevikariater='" + Ledigevikariater + '\'' +
                 '}';
     }
 }

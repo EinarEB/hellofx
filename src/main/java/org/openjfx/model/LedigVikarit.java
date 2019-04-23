@@ -8,84 +8,71 @@ import org.openjfx.model.vo.Sektor;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class LedigVikarit implements Serializable {
 
-     private Sektor sektor;
-     private Adresse arbeidSted;
-     private Arbeidsgiver arbeidsgiver;
-     private JobbKategori jobbKatagori;
-     private String engasjementetsVarighet;
-     private LocalDate arbeidStid;
-     private String stillingsType;
-     private List<String> kravTilKvalifikasjioner = new ArrayList<>();
-     private String lønnsBetingelser;
-     private String arbeidsvilkår;
-     private KontaktInformasjon kontaktInformasjon;
-     private String stillingBeskrivelse;
-     private List<JobbSøker> søkere = new ArrayList<>();
+    private String sektor;
+    private String arbeidSted;
+    private String arbeidsgiver;
+    private String jobbKatagori;
+    private String engasjementetsVarighet;
+    private Date date;
+    private String stillingsType;
+    private String kravTilKvalifikasjioner;
+    private String lønnsBetingelser;
+    private String arbeidsvilkår;
+    private String stillingBeskrivelse;
+    private List<JobbSøker> søkere = new ArrayList<>();
 
 
-    public LedigVikarit(Sektor sektor, Adresse arbeidSted, Arbeidsgiver arbeidsgiver,
-                        JobbKategori jobbKatagori, String engasjementetsVarighet, LocalDate arbeidStid, String stillingsType, String lønnsBetingelser,
-                        KontaktInformasjon kontaktInformasjon, String stillingBeskrivelse) {
+    public LedigVikarit(String sektor, String arbeidSted, String arbeidsgiver, String jobbKatagori,
+                        String engasjementetsVarighet, Date date, String stillingsType, String kravTilKvalifikasjioner, String lønnsBetingelser,
+                        String arbeidsvilkår, String stillingBeskrivelse, List<JobbSøker> søkere) {
         this.sektor = sektor;
         this.arbeidSted = arbeidSted;
         this.arbeidsgiver = arbeidsgiver;
         this.jobbKatagori = jobbKatagori;
         this.engasjementetsVarighet = engasjementetsVarighet;
-        this.arbeidStid = arbeidStid;
+        this.date = date;
         this.stillingsType = stillingsType;
+        this.kravTilKvalifikasjioner = kravTilKvalifikasjioner;
         this.lønnsBetingelser = lønnsBetingelser;
-        this.kontaktInformasjon = kontaktInformasjon;
+        this.arbeidsvilkår = arbeidsvilkår;
         this.stillingBeskrivelse = stillingBeskrivelse;
+        this.søkere = søkere;
     }
 
-    public void addKravTilKvalifikasjioner(String nykravTilKvalifikasjion){
-
-        kravTilKvalifikasjioner.add(nykravTilKvalifikasjion);
-    }
-
-    public void slettKravTilKvalifikasjioner(String kravTilKvalifikasjion){
-
-        kravTilKvalifikasjioner.remove(kravTilKvalifikasjion);
-    }
-
-    public void addJobbSøkere(JobbSøker nyJobbSøker){
-
-        søkere.add(nyJobbSøker);
-    }
-
-    public Sektor getSektor() {
+    public String getSektor() {
         return sektor;
     }
 
-    public void setSektor(Sektor sektor) {
+    public void setSektor(String sektor) {
         this.sektor = sektor;
     }
 
-    public Adresse getArbeidSted() {
+    public String getArbeidSted() {
         return arbeidSted;
     }
 
-    public void setArbeidSted(Adresse arbeidSted) {
+    public void setArbeidSted(String arbeidSted) {
         this.arbeidSted = arbeidSted;
     }
 
-    public Arbeidsgiver getArbeidsgiver() {
+    public String getArbeidsgiver() {
         return arbeidsgiver;
     }
 
-    public void setArbeidsgiver(Arbeidsgiver arbeidsgiver) {
+    public void setArbeidsgiver(String arbeidsgiver) {
         this.arbeidsgiver = arbeidsgiver;
     }
 
-    public JobbKategori getJobbKatagori() {
+    public String getJobbKatagori() {
         return jobbKatagori;
     }
 
-    public void setJobbKatagori(JobbKategori jobbKatagori) {
+    public void setJobbKatagori(String jobbKatagori) {
         this.jobbKatagori = jobbKatagori;
     }
 
@@ -97,12 +84,12 @@ public class LedigVikarit implements Serializable {
         this.engasjementetsVarighet = engasjementetsVarighet;
     }
 
-    public LocalDate getArbeidStid() {
-        return arbeidStid;
+    public Date getDate() {
+        return date;
     }
 
-    public void setArbeidStid(LocalDate arbeidStid) {
-        this.arbeidStid = arbeidStid;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getStillingsType() {
@@ -111,6 +98,14 @@ public class LedigVikarit implements Serializable {
 
     public void setStillingsType(String stillingsType) {
         this.stillingsType = stillingsType;
+    }
+
+    public String getKravTilKvalifikasjioner() {
+        return kravTilKvalifikasjioner;
+    }
+
+    public void setKravTilKvalifikasjioner(String kravTilKvalifikasjioner) {
+        this.kravTilKvalifikasjioner = kravTilKvalifikasjioner;
     }
 
     public String getLønnsBetingelser() {
@@ -129,14 +124,6 @@ public class LedigVikarit implements Serializable {
         this.arbeidsvilkår = arbeidsvilkår;
     }
 
-    public KontaktInformasjon getKontaktInformasjon() {
-        return kontaktInformasjon;
-    }
-
-    public void setKontaktInformasjon(KontaktInformasjon kontaktInformasjon) {
-        this.kontaktInformasjon = kontaktInformasjon;
-    }
-
     public String getStillingBeskrivelse() {
         return stillingBeskrivelse;
     }
@@ -145,23 +132,29 @@ public class LedigVikarit implements Serializable {
         this.stillingBeskrivelse = stillingBeskrivelse;
     }
 
+    public List<JobbSøker> getSøkere() {
+        return søkere;
+    }
+
+    public void setSøkere(List<JobbSøker> søkere) {
+        this.søkere = søkere;
+    }
+
     @Override
     public String toString() {
         return "LedigVikarit{" +
-                "sektor=" + sektor +
-                ", arbeidSted=" + arbeidSted +
-                ", arbeidsgiver=" + arbeidsgiver +
-                ", jobbKatagori=" + jobbKatagori +
+                "sektor='" + sektor + '\'' +
+                ", arbeidSted='" + arbeidSted + '\'' +
+                ", arbeidsgiver='" + arbeidsgiver + '\'' +
+                ", jobbKatagori='" + jobbKatagori + '\'' +
                 ", engasjementetsVarighet='" + engasjementetsVarighet + '\'' +
-                ", arbeidStid=" + arbeidStid +
+                ", date=" + date +
                 ", stillingsType='" + stillingsType + '\'' +
-                ", kravTilKvalifikasjioner=" + kravTilKvalifikasjioner +
+                ", kravTilKvalifikasjioner='" + kravTilKvalifikasjioner + '\'' +
                 ", lønnsBetingelser='" + lønnsBetingelser + '\'' +
                 ", arbeidsvilkår='" + arbeidsvilkår + '\'' +
-                ", kontaktInformasjon=" + kontaktInformasjon +
                 ", stillingBeskrivelse='" + stillingBeskrivelse + '\'' +
                 ", søkere=" + søkere +
                 '}';
     }
 }
-
