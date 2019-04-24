@@ -33,6 +33,10 @@ public class JobbSøker {
 
     }
 
+    public JobbSøker(String fornavn, String etterNavn, LocalDate d, String epost, String erfaring, String utdannelse, String referanser) {
+
+    }
+
 
     public String getFornavn() {
         return fornavn;

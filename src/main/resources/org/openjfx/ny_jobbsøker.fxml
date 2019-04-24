@@ -47,7 +47,7 @@
                      </padding>
                      <children>
                         <Label text="Fornavn:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField fx:id="fornavnField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="fornavnField" onKeyReleased="#FonavnValidattion" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <Label text="Etternavn:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextField fx:id="etternavnField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                         <Label text="Fødselsdato:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -57,21 +57,21 @@
                            </font>
                         </Label>
                         <Label text="Epost:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <TextField fx:id="epostField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <TextField fx:id="epostField" onKeyReleased="#EpostValidation" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                         <Label text="Mobil:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <TextField fx:id="telefonField" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <TextField fx:id="telefonField" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                         <Label prefHeight="28.0" prefWidth="198.0" text="Personlige opplysninger" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <font>
                               <Font name="Avenir Black Oblique" size="12.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="17.0" prefWidth="81.0" text="Erfaring" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <TextField fx:id="Erfaring" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <Label text="Erfaring" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="ErfaringFiled" onKeyReleased="#Erfaringvalidation" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                         <Label prefHeight="17.0" prefWidth="80.0" text="Utdannelse" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                        <TextField fx:id="Utdannelse" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                        <Label prefHeight="17.0" prefWidth="65.0" text="Referanser" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="UtdannelseFiled" onKeyPressed="#Utdannelsevalidation" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <Label text="Referanser" GridPane.columnIndex="1" GridPane.rowIndex="10" />
                         <TextField fx:id="Referanser" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-                        <DatePicker fx:id="datecalander"  prefHeight="27.0" prefWidth="369.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="datecalander" prefHeight="27.0" prefWidth="369.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                   <Button layoutX="244.0" layoutY="430.0" mnemonicParsing="false" onAction="#registere" prefHeight="27.0" prefWidth="140.0" text="Registere" />
